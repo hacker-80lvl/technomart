@@ -1,0 +1,279 @@
+:root {
+    --logoColor: #ee3643;
+    --navTheme: #32425c;
+    --toolsTheme: #293449;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprum.woff2") format("woff2"), url("../fonts/cuprum.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumitalic.woff2") format("woff2"), url("../fonts/cuprumitalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumbold.woff2") format("woff2"), url("../fonts/cuprumbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumbolditalic.woff2") format("woff2"), url("../fonts/cuprumbolditalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    font-family: "Cuprum";
+}
+
+.body-wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f7f9;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+}
+
+.intro h1 {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--logoColor);
+    width: 210px;
+    margin: 0;
+    margin-left: 50px;
+    padding: 0;
+    text-align: left;
+}
+
+.intro .address {
+    font-size: 14px;
+    line-height: 25px;
+    width: 270px;
+    margin: 0;
+}
+
+.intro .address .tel {
+    position: relative;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 21px;
+    color: var(--logoColor);
+    display: inline-block;
+    width: 100%;
+    padding: 9px 0px;
+    padding-left: 30px;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.intro .address .tel::after {
+    content: '';
+    display: block;
+    width: 19px;
+    height: 19px;
+    background-image: url("../images/icon-phone.png");
+    position: absolute;
+    top: 10px;
+    left: 13px;
+}
+
+.account-box button {
+    background-color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 12px 25px;
+    margin-bottom: 25px;
+    border: none;
+}
+
+.account-box .sign-in {
+    padding-left: 47px;
+    position: relative;
+}
+
+.account-box .sign-in::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 17px;
+    background-image: url("../images/icon-login.png");
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    opacity: 0.2;
+}
+
+.account-box .sign-up {
+    margin-left: 10px;
+}
+
+.main-nav {
+    background-color: var(--navTheme);
+    height: 55px;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid var(--toolsTheme);
+}
+
+.main-nav__item {
+    color: #f1f2f4;
+    text-decoration: none;
+}
+
+.tools {
+    background-color: var(--toolsTheme);
+    height: 42px;
+}
+
+.tools .body-wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.main-logo {
+    display: block;
+    width: 220px;
+    height: 31px;
+    padding-top: 11px;
+    background-color: var(--logoColor);
+    border-bottom: 5px solid #b52933;
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.tools__search {
+    flex-grow: 1;
+    height: 39px;
+    padding-right: 20px;
+    padding-left: 48px;
+    border: none;
+    background-color: var(--toolsTheme);
+    color: #fff;
+}
+
+.tools__search::placeholder {
+    color: #fff;
+}
+
+.main-search__label {
+    position: relative;
+}
+
+.main-search__label::before {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-image: url("../images/icon-search.png");
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    opacity: 0.3;
+}
+
+.tools__bookmarks,
+.tools__cart {
+    position: relative;
+    padding: 12px 30px;
+    padding-left: 40px;
+}
+
+.tools__bookmarks::before,
+.tools__cart::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 16px;
+    background-image: url("../images/icon-bookmark.png");
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    opacity: 0.3;
+}
+
+.tools__cart::before {
+    width: 15px;
+    height: 15px;
+    background-image: url("../images/icon-cart.png");
+    top: 12px;
+    left: 10px;
+}
+
+.tools__process {
+    background-color: #63a63e;
+    padding-top: 12px;
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    text-decoration: none;
+}
