@@ -71,6 +71,30 @@ body {
     font-family: "Cuprum";
 }
 
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.button {
+    display: block;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--logoColor);
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+}
+
 .body-wrapper {
     width: 940px;
     margin: 0 auto;
@@ -276,4 +300,616 @@ header {
     height: 30px;
     color: #fff;
     text-decoration: none;
+}
+
+main {
+    padding-top: 60px;
+}
+
+.we-have {
+    margin-bottom: 20px;
+}
+
+.we-have__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.we-have__item {
+    position: relative;
+    width: 300px;
+    height: 123px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-top: 22px;
+    padding-left: 22px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.goods__item--new::after,
+.we-have__item--new::after {
+    content: "new";
+    display: block;
+    width: 86px;
+    height: 25px;
+    background-color: var(--logoColor);
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 18px;
+    padding-top: 5px;
+    position: absolute;
+    top: 5px;
+    right: -23px;
+    transform: rotate(45deg);
+}
+
+.we-have__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.we-have__name {
+    margin: 0;
+}
+
+.we-have__desc {
+    margin-top: 10px;
+}
+
+.we-have__item:nth-child(1) {
+    background-color: #ffbf47;
+}
+
+.we-have__item:nth-child(1)::before {
+    width: 44px;
+    height: 65px;
+    top: 31px;
+    right: 43px;
+    background-image: url("../images/icon-1.png");
+}
+
+.we-have__item:nth-child(1) .button {
+    background-color: #e5ac40;
+}
+
+.we-have__item:nth-child(2) {
+    background-color: #3bbce3;
+}
+
+.we-have__item:nth-child(2)::before {
+    width: 75px;
+    height: 61px;
+    top: 33px;
+    right: 28px;
+    background-image: url("../images/icon-2.png");
+}
+
+.we-have__item:nth-child(2) .button {
+    background-color: #35a9cc;
+}
+
+.we-have__item:nth-child(3) {
+    background-color: #dc91d8;
+}
+
+.we-have__item:nth-child(3)::before {
+    width: 78px;
+    height: 62px;
+    top: 31px;
+    right: 31px;
+    background-image: url("../images/icon-3.png");
+}
+
+.we-have__item:nth-child(3) .button {
+    background-color: #c682c2;
+}
+
+.we-have__list>div>.we-have__item:nth-child(1) {
+    background-color: #8ed78f;
+}
+
+.we-have__list>div>.we-have__item:nth-child(1)::before {
+    width: 59px;
+    height: 72px;
+    top: 26px;
+    right: 45px;
+    background-image: url("../images/icon-4.png");
+}
+
+.we-have__list>div>.we-have__item:nth-child(1) .button {
+    background-color: #80c180;
+}
+
+.we-have__list>div>.we-have__item:nth-child(2) {
+    background-color: #ffc047;
+}
+
+.we-have__list>div>.we-have__item:nth-child(2)::before {
+    width: 78px;
+    height: 63px;
+    top: 32px;
+    right: 31px;
+    background-image: url("../images/icon-5.png");
+}
+
+.we-have__list>div>.we-have__item:nth-child(2) .button {
+    background-color: #e5ac40;
+}
+
+.we-have__item .button {
+    width: 135px;
+}
+
+.we-have__list div {
+    order: 5;
+}
+
+.we-have__slider {
+    position: relative;
+    width: 620px;
+    height: 265px;
+    background: url("../images/slayder-filter.png"), url("../images/slider-filter2.png"), url("../images/bosch-top-img.jpg");
+    background-position: 0 0, right 0, 0 0;
+    background-repeat: no-repeat;
+    order: 4;
+}
+
+.we-have__slider h3 {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.we-have__slider p {
+    margin: 0;
+}
+
+.we-have__slider .slider__control {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    width: 75px;
+    height: 60px;
+    background-image: url("../images/icon-left.png");
+    background-repeat: no-repeat;
+    background-position: 25px 9px;
+}
+
+.we-have__slider .slider__control--right {
+    right: 0;
+    left: auto;
+    background-image: url("../images/icon-right.png");
+}
+
+.we-have__slider .button {
+    margin-top: 117px;
+    width: 195px;
+}
+
+.we-have__slider .slider__pager {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 35px;
+    height: 10px;
+    bottom: 35px;
+    left: 295px;
+}
+
+.we-have__slider .radio-indicator {
+    position: relative;
+}
+
+.we-have__slider .radio-indicator::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.we-have__slider input:focus+.radio-indicator::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.we-have__slider input:checked+.radio-indicator::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: var(--logoColor);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 3px;
+}
+
+.popular-articles header,
+.popular-producers header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f5f0;
+    height: 90px;
+    padding: 0 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.popular-articles h2,
+.popular-producers h2 {
+    font-size: 30px;
+    font-weight: normal;
+    height: 30px;
+    color: #32425c;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.popular-articles .button,
+.popular-producers .button {
+    width: 253px;
+}
+
+.goods {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.goods__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    width: 220px;
+    height: 320px;
+    border: 1px solid #eaeaea;
+    font-family: "PT Sans";
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.goods__item h3,
+.goods__item h4 {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    order: 2;
+}
+
+.goods__item img {
+    order: 1;
+}
+
+.goods__item .old-price {
+    order: 4;
+    text-decoration: line-through;
+    margin: 0;
+    margin-top: 16px;
+    color: #aaaaaa;
+}
+
+.goods__item .price {
+    order: 5;
+    font-size: 17px;
+    width: 141px;
+    margin-top: 12px;
+    background: linear-gradient(-135deg, transparent 15px, var(--logoColor) 0) top right, linear-gradient(-45deg, transparent 15px, var(--logoColor) 0) bottom right;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+.popular-producers__list {
+    margin: 0;
+    margin-bottom: 65px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popular-producers__list li {
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+.services {
+    background-color: #f4f8f9;
+    padding-top: 65px;
+    padding-bottom: 15px;
+}
+
+.services h2,
+.about h2,
+.contacts h2 {
+    font-family: "Cuprum";
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 28px;
+}
+
+.services p,
+.about p,
+.contacts p {
+    font-family: "PT Sans";
+    width: 400px;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.services__slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.services .slider__controls {
+    position: relative;
+}
+
+.services .slider__controls::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 272px;
+    background-image: url("../images/shadow2.png");
+    position: absolute;
+    top: -45px;
+    right: 0px;
+}
+
+.services .slider__control {
+    display: block;
+    background-color: var(--navTheme);
+    color: #fff;
+    border: none;
+    width: 240px;
+    height: 60px;
+    font-family: "Cuprum";
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 22px;
+}
+
+.services .slider__control:nth-child(2) {
+    border-top: 1px solid #4d627b;
+    border-bottom: 1px solid #4d627b;
+}
+
+.services .slider__control--current {
+    background-color: #fff;
+    color: var(--navTheme);
+}
+
+.services .slider__content {
+    margin-left: 75px;
+    width: 100%;
+    height: 260px;
+    background-image: url("../images/truck.jpg");
+    background-repeat: no-repeat;
+    background-position: 175px 20px;
+}
+
+.services .slider__content h3 {
+    font-family: "Cuprum";
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: var(--navTheme);
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.services .slider__content p {
+    width: 275px;
+    margin: 0;
+}
+
+.foot-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding-bottom: 85px;
+}
+
+.foot-wrapper .about {
+    width: 520px;
+}
+
+.foot-wrapper .about h2,
+.foot-wrapper .contacts h2 {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.foot-wrapper .about p,
+.foot-wrapper .contacts p {
+    margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.foot-wrapper .about p:nth-of-type(2) {
+    margin-bottom: 20px;
+}
+
+.foot-wrapper .about__list {
+    list-style: none;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.foot-wrapper .about__list li {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+.foot-wrapper .about__list li::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--logoColor);
+    position: absolute;
+    top: 9px;
+    left: -35px;
+}
+
+.foot-wrapper .about .button {
+    width: 220px;
+}
+
+.foot-wrapper .contacts {
+    width: 300px;
+}
+
+.foot-wrapper .contacts img {
+    margin-bottom: 40px;
+}
+
+.foot-wrapper .contacts .button {
+    width: 300px;
+}
+
+footer,
+footer a {
+    color: #fff;
+}
+
+footer .body-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .body-wrapper * {
+    text-decoration: none;
+    font-family: "Cuprum";
+    color: #f3f7f9;
+}
+
+.footer__top {
+    font-size: 18px;
+    background-color: var(--navTheme);
+    height: 193px;
+}
+
+footer .main-logo {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+footer .footer__nav {
+    width: 550px;
+}
+
+.footer__nav--top,
+.footer__nav--bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer .footer__nav--bottom {
+    width: 525px;
+    margin-left: 25px;
+}
+
+.footer__nav--bottom a {
+    color: #ffda96;
+}
+
+.footer__bottom {
+    background-color: var(--toolsTheme);
+    height: 107px;
+}
+
+.footer__bottom .body-wrapper {
+    align-items: center;
+    font-size: 16px;
+    height: 100%;
+}
+
+.footer__copyright {
+    margin-right: 90px;
+}
+
+.social__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    justify-content: space-between;
+}
+
+.social__item a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #212a3a;
+    background-image: url("../images/vk-icon.png");
+    background-repeat: no-repeat;
+    background-position: 6px 13px;
+    border-radius: 50%;
+}
+
+.social__item--fb a {
+    background-image: url("../images/fb-icon.png");
+    background-position: 14px 8px;
+}
+
+.social__item--ins a {
+    background-image: url("../images/insta-icon.png");
+    background-position: 10px 10px;
+}
+
+.footer__bottom a {
+    color: #ffda96;
 }
