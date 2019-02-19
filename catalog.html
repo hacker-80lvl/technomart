@@ -85,24 +85,33 @@
                                 <legend>Цена:</legend>
                                 <div class="cost__range">
                                     <div class="cost__range-box">
-                                        <div class="range-line">
+                                        <div class="range-line range-line__left">
                                             <span class="range-handle"></span>
                                             <span class="range-handle"></span>
                                         </div>
+                                        <div class="range-line range-line__center"></div>
+                                        <div class="range-line range-line__right"></div>
                                     </div>
-                                    <p class="cost__range-counter">
-                                        <input type="text" placeholder="0" readonly tabindex="-1">
-                                        -
-                                        <input type="text" placeholder="30000" readonly tabindex="-1">
-                                    </p>
                                 </div>
+                                <p class="cost-counter">
+                                    <input type="text" placeholder="3600 &#8381;" readonly tabindex="-1" />
+                                    -
+                                    <input type="text" placeholder="28000 &#8381;" readonly tabindex="-1" />
+                                </p>
                             </fieldset>
                             <fieldset class="filter__vendor">
                                 <legend>Производители:</legend>
                                 <ul class="vendor__list">
                                     <li class="vendor__item">
                                         <label for="filter__vendor--bosch" class="disabled">
-                                            <input type="checkbox" name="vendor" id="filter__vendor--bosch" class="visually-hidden" checked disabled />
+                                            <input
+                                                type="checkbox"
+                                                name="vendor"
+                                                id="filter__vendor--bosch"
+                                                class="visually-hidden"
+                                                checked
+                                                disabled
+                                            />
                                             <span class="checkbox-indicator"></span>
                                             BOSCH
                                         </label>
@@ -307,14 +316,12 @@
                 <div class="body-wrapper">
                     <h3>Пара слов о Перфораторах</h3>
                     <p>
-                        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
-                        бетоне и
-                        камне. 
-                        <br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
-                        дрели,
-                        шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
-                        совмещены
-                        отбойный молоток и ударная дрель.
+                        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
+                        камне.
+                        <br />
+                        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и
+                        отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+                        ударная дрель.
                     </p>
                 </div>
             </section>
@@ -379,5 +386,16 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal visually-hidden">
+            <section class="modal-confirm">
+                <h2>Товар добавлен в корзину!</h2>
+                <div>
+                    <button class="button">Оформить заказ</button>
+                    <button class="button">продолжить покупки</button>
+                </div>
+                <button class="modal-confirm__close"><span class="visually-hidden">Закрыть</span></button>
+            </section>
+        </div>
     </body>
 </html>

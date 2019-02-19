@@ -12,10 +12,10 @@
             <div class="tools">
                 <div class="body-wrapper">
                     <a href="index.html" class="main-logo">Техномарт</a>
+                    <input type="text" name="" id="main-search" class="tools__search" placeholder="Поиск:" />
                     <label for="main-search" class="main-search__label">
                         <span class="visually-hidden">Поиск</span>
                     </label>
-                    <input type="text" name="" id="main-search" class="tools__search" placeholder="Поиск:" />
                     <div class="tools__bookmarks">
                         Закладки:
                         <span>0</span>
@@ -217,13 +217,14 @@
                             <button class="slider__control slider__control--current">Доставка</button>
                             <button class="slider__control">Гарантия</button>
                             <button class="slider__control">Кредит</button>
-                        </div>                        
+                        </div>
                         <div class="slider__content">
                             <div class="slider__content--">
                                 <h3>Доставка</h3>
                                 <p>
                                     Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
-                                    <br>поднимая его на ваш этаж!
+                                    <br />
+                                    поднимая его на ваш этаж!
                                 </p>
                             </div>
                             <div class="slider__content--">
@@ -247,8 +248,9 @@
                             любителей сэкономить на гастарбайтерах.
                         </p>
                         <p>
-                            Мы можем доставить ваш товар в самые отдаленные точки России! 
-                            <br>Техномарт работает со многими транспортными компаниями:
+                            Мы можем доставить ваш товар в самые отдаленные точки России!
+                            <br />
+                            Техномарт работает со многими транспортными компаниями:
                         </p>
                         <ul class="about__list">
                             <li>Деловые линии</li>
@@ -261,7 +263,8 @@
                         <h2>Контакты</h2>
                         <p>
                             Вы можете забрать товар сами,
-                            <br>заехав в наш офис:
+                            <br />
+                            заехав в наш офис:
                         </p>
                         <img src="images/map.jpg" width="300" height="160" alt="image" />
                         <button class="button">Заблудились? Напишите нам!</button>
@@ -276,8 +279,9 @@
                     <div>
                         <a href="index.html" class="main-logo">Техномарт</a>
                         <p class="footer__address">
-                            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
-                            <br>+7 (812) 555-05-55
+                            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                            <br />
+                            +7 (812) 555-05-55
                         </p>
                     </div>
                     <nav class="footer__nav">
@@ -301,7 +305,8 @@
                 <div class="body-wrapper">
                     <p class="footer__copyright">
                         © 2010–2017 Компания «Техномарт»
-                        <br>Все права защищены
+                        <br />
+                        Все права защищены
                     </p>
                     <ul class="footer__social social__list">
                         <li class="social__item social__item--vk">
@@ -327,5 +332,36 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal visually-hidden">
+            <section class="modal-map">
+                <img src="images/big-map.jpg" width="970" height="476" alt="image">
+                <button class="modal-map__close"><span class="visually-hidden">Закрыть</span></button>
+            </section>
+        </div>
+        
+        <div class="modal visually-hidden">
+            <section class="modal-mail">
+                <h2 class="visually-hidden">Напишите нам!</h2>
+                <form action="" class="modal-mail__form">
+                    <div class="modal-mail__top">
+                        <div>
+                            <label for="user_name">Ваше имя:</label>
+                            <input type="text" id="user_name" placeholder="Представьтесь, пожалуйста" required />
+                        </div>
+                        <div>
+                            <label for="user_mail">Ваш e-mail:</label>
+                            <input type="mail" id="user_mail" placeholder="Для отправки ответа" required />
+                        </div>
+                        <label for="">Текст письма:</label>
+                        <textarea name="content" id="mail_content" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
+                    </div>
+                    <div class="modal-mail__bottom">
+                        <button type="submit" class="button">Отправить</button>
+                    </div>
+                </form>
+                <button class="modal-mail__close"><span class="visually-hidden">Закрыть</span></button>
+            </section>
+        </div>
     </body>
 </html>
