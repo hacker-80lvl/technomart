@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/normalize.css" />
         <link rel="stylesheet" href="styles/style.css" />
-        <title>Каталаг Техномарт</title>
+        <title>Каталог Техномарт</title>
     </head>
 
     <body>
@@ -93,7 +93,7 @@
                                         <div class="range-line range-line__right"></div>
                                     </div>
                                 </div>
-                                <p class="cost-counter">
+                                <p class="cost__counter">
                                     <input type="text" placeholder="3600 &#8381;" readonly tabindex="-1" />
                                     -
                                     <input type="text" placeholder="28000 &#8381;" readonly tabindex="-1" />
@@ -387,15 +387,17 @@
             </div>
         </footer>
 
-        <div class="modal visually-hidden">
+        <div class="modal modal__confirm visually-hidden">
             <section class="modal-confirm">
                 <h2>Товар добавлен в корзину!</h2>
                 <div>
                     <button class="button">Оформить заказ</button>
                     <button class="button">продолжить покупки</button>
                 </div>
-                <button class="modal-confirm__close"><span class="visually-hidden">Закрыть</span></button>
+                <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
             </section>
         </div>
+        
+        <script src="js/main-script.js"></script>
     </body>
 </html>

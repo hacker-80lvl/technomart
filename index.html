@@ -81,35 +81,31 @@
                                 <p class="we-have__desc button">бесплатно</p>
                             </li>
                         </div>
-                        <li class="we-have__item we-have__slider">
-                            <div class="slider__item">
+                        <li class="we-have__item we-have__carousel">
+                            <div class="carousel__item">
                                 <div>
                                     <h3>Дрели</h3>
                                     <p>Соседям на радость!</p>
                                 </div>
+                                <img src="images/bosch-top-img.jpg" width="620" height="265" alt="image" />
                             </div>
-                            <div class="slider__item visually-hidden">
+                            <div class="carousel__item visually-hidden">
                                 <div>
-                                    <h3></h3>
-                                    <p></p>
+                                    <h3>Перфораторы</h3>
+                                    <p>Настоящие мужские игрушки</p>
                                 </div>
+                                <img src="images/bosch-top-img2.jpg" width="620" height="265" alt="image" />
                             </div>
-                            <div class="slider__item visually-hidden">
-                                <div>
-                                    <h3></h3>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <a href="#" class="button slider__button">Открыть каталог</a>
-                            <button class="slider__control slider__control--left"><span class="visually-hidden">Prev</span></button>
-                            <button class="slider__control slider__control--right"><span class="visually-hidden">Next</span></button>
-                            <div class="slider__pager">
-                                <label for="slider__pager1">
-                                    <input type="radio" name="pager" id="slider__pager1" class="visually-hidden" />
+                            <a href="#" class="button carousel__button">Открыть каталог</a>
+                            <button class="carousel__control carousel__control--left"><span class="visually-hidden">Prev</span></button>
+                            <button class="carousel__control carousel__control--right"><span class="visually-hidden">Next</span></button>
+                            <div class="carousel__pager">
+                                <label for="carousel__pager1">
+                                    <input type="radio" name="pager" id="carousel__pager1" class="visually-hidden" disabled checked />
                                     <span class="radio-indicator"></span>
                                 </label>
-                                <label for="slider__pager2">
-                                    <input type="radio" name="pager" id="slider__pager2" class="visually-hidden" checked />
+                                <label for="carousel__pager2">
+                                    <input type="radio" name="pager" id="carousel__pager2" class="visually-hidden" disabled />
                                     <span class="radio-indicator"></span>
                                 </label>
                             </div>
@@ -212,14 +208,14 @@
                         Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки
                         приятными.
                     </p>
-                    <div class="services__slider slider">
-                        <div class="slider__controls">
-                            <button class="slider__control slider__control--current">Доставка</button>
-                            <button class="slider__control">Гарантия</button>
-                            <button class="slider__control">Кредит</button>
+                    <div class="services__carousel carousel">
+                        <div class="carousel__controls">
+                            <button class="carousel__control carousel__control--current">Доставка</button>
+                            <button class="carousel__control">Гарантия</button>
+                            <button class="carousel__control">Кредит</button>
                         </div>
-                        <div class="slider__content">
-                            <div class="slider__content--">
+                        <div class="carousel__content">
+                            <div class="carousel__content--delivery">
                                 <h3>Доставка</h3>
                                 <p>
                                     Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
@@ -227,13 +223,20 @@
                                     поднимая его на ваш этаж!
                                 </p>
                             </div>
-                            <div class="slider__content--">
-                                <h3></h3>
-                                <p></p>
+                            <div class="carousel__content--guarantee visually-hidden">
+                                <h3>Гарантия</h3>
+                                <p>
+                                    Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы
+                                    всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь
+                                    сами.
+                                </p>
                             </div>
-                            <div class="slider__content--">
-                                <h3></h3>
-                                <p></p>
+                            <div class="carousel__content--credit visually-hidden">
+                                <h3>Кредит</h3>
+                                <p>
+                                    Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                                </p>
+                                <button class="button">Отправить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -333,14 +336,25 @@
             </div>
         </footer>
 
-        <div class="modal visually-hidden">
-            <section class="modal-map">
-                <img src="images/big-map.jpg" width="970" height="476" alt="image">
-                <button class="modal-map__close"><span class="visually-hidden">Закрыть</span></button>
+        <div class="modal modal__confirm visually-hidden">
+            <section class="modal-confirm">
+                <h2>Товар добавлен в корзину!</h2>
+                <div>
+                    <button class="button">Оформить заказ</button>
+                    <button class="button">продолжить покупки</button>
+                </div>
+                <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
             </section>
         </div>
-        
-        <div class="modal visually-hidden">
+
+        <div class="modal modal__map visually-hidden">
+            <section class="modal-map">
+                <img src="images/big-map.jpg" width="970" height="476" alt="image" />
+                <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
+            </section>
+        </div>
+
+        <div class="modal modal__mail visually-hidden">
             <section class="modal-mail">
                 <h2 class="visually-hidden">Напишите нам!</h2>
                 <form action="" class="modal-mail__form">
@@ -360,8 +374,10 @@
                         <button type="submit" class="button">Отправить</button>
                     </div>
                 </form>
-                <button class="modal-mail__close"><span class="visually-hidden">Закрыть</span></button>
+                <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
             </section>
         </div>
+
+        <script src="js/main-script.js"></script>
     </body>
 </html>

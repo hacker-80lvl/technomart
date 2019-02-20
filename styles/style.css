@@ -480,15 +480,15 @@ main {
     margin-top: 10px;
 }
 
-.we-have__item .button:not(.slider__button) {
+.we-have__item .button:not(.carousel__button) {
     background-color: rgba(126, 126, 126, 0.212);
 }
 
-.we-have__item .button:not(.slider__button):hover {
+.we-have__item .button:not(.carousel__button):hover {
     background-color: rgba(126, 126, 126, 0.404);
 }
 
-.we-have__item .button:not(.slider__button):active {
+.we-have__item .button:not(.carousel__button):active {
     background-color: rgba(126, 126, 126, 0.801);
 }
 
@@ -560,28 +560,46 @@ main {
     order: 5;
 }
 
-.we-have__slider {
+.we-have__carousel {
     position: relative;
     width: 620px;
     height: 265px;
-    background: url("../images/slayder-filter.png"), url("../images/slider-filter2.png"), url("../images/bosch-top-img.jpg");
+    padding: 0;
     background-position: 0 0, right 0, 0 0;
     background-repeat: no-repeat;
     order: 4;
 }
 
-.we-have__slider h3 {
+.carousel__item div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 620px;
+    height: 105px;
+    padding: 26px;
+    box-sizing: border-box;
+}
+
+.carousel__item:nth-child(1) div {
+    background-image: url("../images/carousel-filter1.png");
+}
+
+.carousel__item:nth-child(2) div {
+    background-image: url("../images/carousel-filter2.png");
+}
+
+.we-have__carousel h3 {
     font-size: 36px;
     line-height: 36px;
     margin: 0;
     text-transform: uppercase;
 }
 
-.we-have__slider p {
+.we-have__carousel p {
     margin: 0;
 }
 
-.we-have__slider .slider__control {
+.we-have__carousel .carousel__control {
     position: absolute;
     top: 105px;
     left: 0;
@@ -594,18 +612,20 @@ main {
     background-position: 25px 9px;
 }
 
-.we-have__slider .slider__control--right {
+.we-have__carousel .carousel__control--right {
     right: 0;
     left: auto;
     background-image: url("../images/icon-right.png");
 }
 
-.we-have__slider .button {
-    margin-top: 117px;
+.we-have__carousel .button {
+    position: absolute;
+    top: 206px;
+    left: 25px;
     width: 195px;
 }
 
-.we-have__slider .slider__pager {
+.we-have__carousel .carousel__pager {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -615,11 +635,11 @@ main {
     left: 295px;
 }
 
-.we-have__slider .radio-indicator {
+.we-have__carousel .radio-indicator {
     position: relative;
 }
 
-.we-have__slider .radio-indicator::before {
+.we-have__carousel .radio-indicator::before {
     content: "";
     display: block;
     width: 13px;
@@ -628,12 +648,12 @@ main {
     border-radius: 50%;
 }
 
-.we-have__slider input:focus+.radio-indicator::before {
+.we-have__carousel input:focus+.radio-indicator::before {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
 }
 
-.we-have__slider input:checked+.radio-indicator::after {
+.we-have__carousel input:checked+.radio-indicator::after {
     content: "";
     display: block;
     width: 7px;
@@ -766,7 +786,7 @@ main {
 }
 
 .goods__item:hover {
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
     border-color: transparent;
 }
 
@@ -818,7 +838,7 @@ main {
 }
 
 .popular-producers__list li:hover {
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
     border-color: transparent;
 }
 
@@ -829,7 +849,6 @@ main {
 .services {
     background-color: #f4f8f9;
     padding-top: 65px;
-    padding-bottom: 15px;
 }
 
 .services h2,
@@ -855,16 +874,16 @@ main {
     margin-bottom: 70px;
 }
 
-.services__slider {
+.services__carousel {
     display: flex;
     flex-direction: row;
 }
 
-.services .slider__controls {
+.services .carousel__controls {
     position: relative;
 }
 
-.services .slider__controls::after {
+.services .carousel__controls::after {
     content: '';
     display: block;
     width: 10px;
@@ -875,7 +894,7 @@ main {
     right: 0px;
 }
 
-.services .slider__control {
+.services .carousel__control {
     display: block;
     background-color: var(--navTheme);
     color: #fff;
@@ -890,30 +909,27 @@ main {
     padding-left: 22px;
 }
 
-.services .slider__control:nth-child(2) {
+.services .carousel__control:nth-child(2) {
     border-top: 1px solid #4d627b;
     border-bottom: 1px solid #4d627b;
 }
 
-.services .slider__control--current {
+.services .carousel__control--current {
     background-color: #fff;
     color: var(--navTheme);
 }
 
-.services .slider__control:not(.slider__control--current):hover {
+.services .carousel__control:not(.carousel__control--current):hover {
     background-color: #293449;
 }
 
-.services .slider__content {
-    margin-left: 75px;
+.services .carousel__content {
+    margin-left: 70px;
     width: 100%;
-    height: 260px;
-    background-image: url("../images/truck.jpg");
-    background-repeat: no-repeat;
-    background-position: 175px 20px;
+    height: 280px;
 }
 
-.services .slider__content h3 {
+.services .carousel__content h3 {
     font-family: "Cuprum";
     font-size: 36px;
     line-height: 36px;
@@ -924,9 +940,36 @@ main {
     margin-bottom: 25px;
 }
 
-.services .slider__content p {
-    width: 275px;
+.services .carousel__content p {
+    width: 280px;
+    font-size: 13px;
+    line-height: 24px;
     margin: 0;
+}
+
+.carousel__content--delivery,
+.carousel__content--guarantee,
+.carousel__content--credit {
+    height: 100%;
+    background-position: top 0 right 0;
+    background-repeat: no-repeat;
+}
+
+.carousel__content--delivery {
+    background-image: url("../images/delivery.png");
+}
+
+.carousel__content--guarantee {
+    background-image: url("../images/guarantee.png");
+}
+
+.carousel__content--credit {
+    background-image: url("../images/credit.png");
+}
+
+.carousel__content--credit button {
+    width: 195px;
+    margin-top: 30px;
 }
 
 .foot-wrapper {
@@ -995,6 +1038,7 @@ main {
 
 .foot-wrapper .contacts img {
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .foot-wrapper .contacts .button {
@@ -1212,8 +1256,7 @@ footer .footer__nav--bottom {
     width: 100%;
 }
 
-.modal-mail__close,
-.modal-map__close {
+.modal__close {
     position: absolute;
     top: 9px;
     right: 9px;
@@ -1459,7 +1502,7 @@ legend {
     left: 131px;
 }
 
-.cost-counter {
+.cost__counter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1467,7 +1510,7 @@ legend {
     margin-top: 10px;
 }
 
-.cost-counter input {
+.cost__counter input {
     width: 95px;
     height: 38px;
     border: none;
@@ -1476,11 +1519,11 @@ legend {
     text-align: center;
 }
 
-.cost-counter input:focus {
+.cost__counter input:focus {
     outline: none;
 }
 
-.cost-counter input::placeholder {
+.cost__counter input::placeholder {
     color: #000;
 }
 
@@ -1775,15 +1818,4 @@ legend {
 .modal-confirm div .button:nth-child(2):active {
     background-color: rgb(175, 175, 175);
     color: #000;
-}
-
-.modal-confirm__close {
-    position: absolute;
-    top: 9px;
-    right: 9px;
-    width: 21px;
-    height: 21px;
-    background-image: url("../images/close.png");
-    background-color: transparent;
-    border: none;
 }
