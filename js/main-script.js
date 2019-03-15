@@ -115,11 +115,15 @@
         goods_items.forEach(goods_item => {
             goods_item.addEventListener("mouseover", function(evt) {
                 goods_item.querySelector("div").classList.remove("visually-hidden");
+                goods_item.querySelector("div").classList.add("js");
+                goods_item.querySelector("div a").tabIndex = 1;
+                goods_item.querySelector("div button").tabIndex = 1;
                 goods_item.querySelector("img").classList.add("visually-hidden");
             });
 
             goods_item.addEventListener("mouseout", function(evt) {
                 goods_item.querySelector("div").classList.add("visually-hidden");
+                goods_item.querySelector("div").classList.remove("js");
                 goods_item.querySelector("img").classList.remove("visually-hidden");
             });
         });
